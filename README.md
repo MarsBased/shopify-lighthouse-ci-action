@@ -52,6 +52,7 @@ The `shopify/lighthouse-ci-action` accepts the following arguments:
 
 * `access_token` - (required) see [Authentication](#authentication)
 * `store` - (required) Shopify store Admin URL, e.g. `my-store.myshopify.com`.
+* `store_web_url` - (optional) The URL of the shop to visit. Defaults to store
 * `password` - (optional) For password protected shops
 * `product_handle` - (optional) Product handle to run the product page Lighthouse run on. Defaults to the first product.
 * `theme_root` - (optional) The root folder for the theme files that will be uploaded. Defaults to `.`
