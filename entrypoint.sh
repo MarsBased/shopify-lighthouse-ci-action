@@ -163,7 +163,7 @@ theme_root="${THEME_ROOT:-.}"
 # Use the $SHOP_PASSWORD defined as a Github Secret for password protected stores.
 [[ -z ${SHOP_PASSWORD+x} ]] && shop_password='' || shop_password="$SHOP_PASSWORD"
 
-log "Will run Lighthouse CI on $store_api"
+log "Will run Lighthouse CI on $store_web"
 
 step "Creating development theme"
 theme_push_log="$(mktemp)"
@@ -232,7 +232,7 @@ module.exports = async (browser) => {
   // Get password cookie if password is set
   if ('$shop_password' !== '') {
     console.error('Getting password cookie...');
-    await page.goto('$store_api/password$query_string');
+    await page.goto('$store_web/password$query_string');
     await page.waitForSelector('form[action*=password] input[type="password"]');
     await page.\$eval('form[action*=password] input[type="password"]', input => input.value = '$shop_password');
     await Promise.all([
