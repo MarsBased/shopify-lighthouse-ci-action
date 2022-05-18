@@ -1,5 +1,10 @@
 # shopify/lighthouse-ci-action
 
+---
+
+**Forked to add a new variable that sets the specific web URL to visit using lighthouse, different from the variable used to fetch from the Shopify API**
+---
+
 [About this repo](#about-this-repo) | [Usage](#usage) | [Authentication](#authentication) | [Configuration](#configuration)
 
 ## About this repo
